@@ -1,11 +1,13 @@
-function makeArray(firstArray, secondArray, maxLength) {
-  const newArray = firstArray.concat(secondArray);
+function filterArray(numbers, value) {
+  const result = [];
 
-  if (newArray.length > maxLength) {
-    return newArray.slice(0, maxLength);
+  for (const number of numbers) {
+    if (number > value) {
+      result.push(number);
+    }
   }
 
-  return newArray;
+  return result;
 }
 
 
